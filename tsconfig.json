@@ -15,7 +15,8 @@
     "isolatedModules": true,
     "noEmit": false,
     "jsx": "react-jsx",
-    "sourceMap": true
+    "sourceMap": true,
+    "jsxImportSource": "@emotion/react"
   },
   "include": ["src"],
   "exclude": ["node_modules"]
