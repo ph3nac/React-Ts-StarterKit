@@ -24,6 +24,10 @@ module.exports = {
         test: /\.css/,
         use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
+      {
+        test: /\.html$/i,
+        loader: 'html-loader',
+      },
     ],
   },
   devtool: prod ? undefined : 'source-map',

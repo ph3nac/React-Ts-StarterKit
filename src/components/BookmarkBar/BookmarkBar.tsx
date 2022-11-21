@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
+import { colorCode } from '@/colorCode';
 import { css } from '@emotion/react';
 import { FC } from 'react';
-import { colorCode } from '../../colorCode';
 import Bookmarks, { BookmarksProps } from '../Bookmarks/Bookmarks';
 
 export type BarProps = {

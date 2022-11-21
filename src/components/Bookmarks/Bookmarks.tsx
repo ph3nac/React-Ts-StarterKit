@@ -1,8 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import { FC } from 'react';
 import { css } from '@emotion/react';
+import { colorCode } from '@/colorCode';
 import Bookmark, { BookmarkProps } from '../Bookmark/Bookmark';
-import { colorCode } from '../../colorCode';
 
 export type BookmarksProps = {
   id: string;
