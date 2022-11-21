@@ -1,6 +1,7 @@
-import html2json from '../htmlText2json';
+import htmlTextToJson from '../htmlTextToJson';
 import html from './sample.html';
+import { expected } from './expected';
 
 test('test1', () => {
-  expect(html2json(html)).toBe({});
+  expect(htmlTextToJson(html)).toEqual(expected);
 });
