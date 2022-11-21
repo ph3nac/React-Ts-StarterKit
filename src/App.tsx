@@ -1,8 +1,9 @@
-import React from "react";
+import { BookmarkMock } from './components/Bookmark/BookmarkMock';
+import Bookmark from './components/Bookmark/Bookmark';
 
 const App = () => (
   <div className="App">
-    <h1>Hello, React!</h1>
+    <Bookmark {...BookmarkMock} />
   </div>
 );
 export default App;

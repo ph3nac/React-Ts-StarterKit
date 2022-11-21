@@ -10,8 +10,7 @@ module.exports = {
     'airbnb',
     'airbnb-typescript',
     'airbnb/hooks',
-    'plugin:import/errors',
-    'plugin:import/warnings',
+    'plugin:import/recommended',
     'plugin:import/typescript',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:jest/recommended',
@@ -62,5 +61,10 @@ module.exports = {
         peerDependencies: true,
       },
     ],
+  },
+  settings: {
+    'import/resolver': {
+      typescript: true,
+    },
   },
 };
