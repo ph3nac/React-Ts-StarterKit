@@ -1,0 +1,54 @@
+/** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react';
+import { FC } from 'react';
+import { colorCode } from '../../colorCode';
+import Bookmarks, { BookmarksProps } from '../Bookmarks/Bookmarks';
+
+export type BarProps = {
+  title: string;
+  add_date: string;
+  last_modified: string;
+  personal_toolbar_folder: boolean;
+  bookmarks_array: BookmarksProps[];
+};
+
+const BarStyles = css`
+  background-color: ${colorCode.blue};
+  color: white;
+  font-size: 28px;
+  border-radius: 0.2rem;
+`;
+const titleStyles = css`
+  margin-left: 10px;
+`;
+const gridStyles = css`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+  grid-gap: 10px;
+  text-align: justify;
+  padding: 0px 0.5rem 0.5rem 0.5rem;
+`;
+
+const BookmarkBar: FC<BarProps> = ({
+  title,
+  add_date,
+  last_modified,
+  personal_toolbar_folder,
+  bookmarks_array,
+}) => (
+  <div className="BookmarksBar" css={BarStyles}>
+    <div css={titleStyles}>{title}</div>
+    <div css={gridStyles}>
+      {bookmarks_array.map((bookmarks) => (
+        <Bookmarks
+          title={bookmarks.title}
+          add_date={bookmarks.add_date}
+          last_modified={bookmarks.last_modified}
+          bookmarks={bookmarks.bookmarks}
+          id="1"
+        />
+      ))}
+    </div>
+  </div>
+);
+export default BookmarkBar;

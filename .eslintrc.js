@@ -9,13 +9,14 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'airbnb',
     'airbnb-typescript',
-    'arbnb/hooks',
+    'airbnb/hooks',
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:import/typescript',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:jest/recommended',
     'plugin:jest-dom/recommended',
+    'plugin:testing-library/react',
     'plugin:storybook/recommended',
     'prettier',
   ],
@@ -27,6 +28,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
     project: './tsconfig.json',
+    tsconfigRootDir: __dirname,
   },
   plugins: [
     'react',
@@ -61,12 +63,4 @@ module.exports = {
       },
     ],
   },
-  overrides: [
-    {
-      files: ['**/*.test.*'],
-      rules: {
-        'import/extensions': 0,
-      },
-    },
-  ],
 };
