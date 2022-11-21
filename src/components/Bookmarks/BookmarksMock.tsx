@@ -1,6 +1,5 @@
 /* eslint-disable import/prefer-default-export */
-
-import { BookmarkProps } from '../Bookmark/Bookmark';
+import { BookmarkProps } from '@/@types/BookmarkTyep';
 import { BookmarkMock } from '../Bookmark/BookmarkMock';
 
 const bookmarkArray: BookmarkProps[] = Array.from({ length: 5 }, (v, i) => ({

@@ -2,15 +2,8 @@
 import { FC } from 'react';
 import { css } from '@emotion/react';
 import { colorCode } from '@/colorCode';
-import Bookmark, { BookmarkProps } from '../Bookmark/Bookmark';
-
-export type BookmarksProps = {
-  id: string;
-  title: string;
-  add_date: string;
-  last_modified: string;
-  bookmarks: BookmarkProps[];
-};
+import Bookmark from '../Bookmark/Bookmark';
+import { BookmarksProps } from '../../@types/BookmarkTyep';
 
 const Bookmarks: FC<BookmarksProps> = ({
   id,

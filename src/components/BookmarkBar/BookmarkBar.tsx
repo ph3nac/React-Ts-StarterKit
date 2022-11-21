@@ -2,15 +2,8 @@
 import { colorCode } from '@/colorCode';
 import { css } from '@emotion/react';
 import { FC } from 'react';
-import Bookmarks, { BookmarksProps } from '../Bookmarks/Bookmarks';
-
-export type BarProps = {
-  title: string;
-  add_date: string;
-  last_modified: string;
-  personal_toolbar_folder: boolean;
-  bookmarks_array: BookmarksProps[];
-};
+import { BarProps } from '@/@types/BookmarkTyep';
+import Bookmarks from '../Bookmarks/Bookmarks';
 
 const BarStyles = css`
   background-color: ${colorCode.blue};

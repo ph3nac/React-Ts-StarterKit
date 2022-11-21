@@ -2,14 +2,7 @@
 import { colorCode } from '@/colorCode';
 import { css } from '@emotion/react';
 import { FC } from 'react';
-
-export type BookmarkProps = {
-  id: string;
-  title: string;
-  href: string;
-  add_date: string;
-  icon: string;
-};
+import { BookmarkProps } from '@/@types/BookmarkTyep';
 
 const Bookmark: FC<BookmarkProps> = ({ id, title, href, add_date, icon }) => {
   const liStyle = css`
