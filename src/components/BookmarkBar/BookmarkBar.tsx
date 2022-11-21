@@ -3,7 +3,8 @@ import { colorCode } from '@/colorCode';
 import { css } from '@emotion/react';
 import { FC } from 'react';
 import { BarProps } from '@/@types/BookmarkTyep';
-import Bookmarks from '../Bookmarks/Bookmarks';
+import Folder from '../Folder/Folder';
+import Bookmark from '../Bookmark/Bookmark';
 
 const BarStyles = css`
   background-color: ${colorCode.blue};
@@ -27,18 +28,28 @@ const BookmarkBar: FC<BarProps> = ({
   add_date,
   last_modified,
   personal_toolbar_folder,
-  bookmarks_array,
+  folders,
+  bookmarks,
 }) => (
-  <div className="BookmarksBar" css={BarStyles}>
+  <div className="BookmarkBar" css={BarStyles}>
     <div css={titleStyles}>{title}</div>
     <div css={gridStyles}>
-      {bookmarks_array.map((bookmarks) => (
-        <Bookmarks
-          title={bookmarks.title}
-          add_date={bookmarks.add_date}
-          last_modified={bookmarks.last_modified}
-          bookmarks={bookmarks.bookmarks}
+      {folders?.map((folder) => (
+        <Folder
+          title={folder.title}
+          add_date={folder.add_date}
+          last_modified={folder.last_modified}
+          bookmarks={folder.bookmarks}
           id="1"
+        />
+      ))}
+      {bookmarks?.map((bookmark) => (
+        <Bookmark
+          id={bookmark.id}
+          title={bookmark.title}
+          href={bookmark.href}
+          add_date={bookmark.add_date}
+          icon={bookmark.icon}
         />
       ))}
     </div>

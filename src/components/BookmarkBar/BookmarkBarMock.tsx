@@ -1,17 +1,23 @@
 /* eslint-disable import/prefer-default-export */
-import { BookmarksProps } from '../Bookmarks/Bookmarks';
-import { BookmarksMock } from '../Bookmarks/BookmarksMock';
-import { BarProps } from './BookmarkBar';
+import { BarProps, BookmarkProps, FolderProps } from '@/@types/BookmarkTyep';
+import { FolderMock } from '../Folder/FolderMock';
+import { BookmarkMock } from '../Bookmark/BookmarkMock';
 
-const bookmarksArray: BookmarksProps[] = Array.from({ length: 5 }, (v, i) => ({
-  ...BookmarksMock,
+const folders: FolderProps[] = Array.from({ length: 5 }, (v, i) => ({
+  ...FolderMock,
+  id: i.toString(),
+}));
+
+const bookmarks: BookmarkProps[] = Array.from({ length: 5 }, (v, i) => ({
+  ...BookmarkMock,
   id: i.toString(),
 }));
 
 export const BookmarkBarMock: BarProps = {
-  title: 'account',
+  title: 'Bookmark Bar',
   add_date: '000000',
   last_modified: '000000',
   personal_toolbar_folder: true,
-  bookmarks_array: bookmarksArray,
+  folders: folders,
+  bookmarks: bookmarks,
 };
