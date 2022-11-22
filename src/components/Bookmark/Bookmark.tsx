@@ -1,10 +1,18 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /** @jsxImportSource @emotion/react */
+import { ContentProps } from '@/@types/BookmarkTyep';
 import { colorCode } from '@/colorCode';
 import { css } from '@emotion/react';
 import { FC } from 'react';
-import { BookmarkProps } from '@/@types/BookmarkTyep';
 
-const Bookmark: FC<BookmarkProps> = ({ id, title, href, add_date, icon }) => {
+const Bookmark: FC<ContentProps> = ({
+  id,
+  title,
+  href,
+  add_date,
+  icon,
+  type,
+}) => {
   const liStyle = css`
     list-style-type: none;
     margin-top: 2px;

@@ -1,4 +1,4 @@
-export type BookmarkProps = {
+type BookmarkProps = {
   id: string;
   title: string;
   href: string;
@@ -6,7 +6,7 @@ export type BookmarkProps = {
   icon: string;
 };
 
-export type FolderProps = {
+type FolderProps = {
   id: string;
   title: string;
   add_date: string;
@@ -14,13 +14,23 @@ export type FolderProps = {
   bookmarks?: BookmarkProps[];
 };
 
+export type ContentProps = {
+  id: string;
+  title: string;
+  add_date: string;
+  type: 'folder' | 'bookmark';
+  href?: string;
+  icon?: string;
+  last_modified?: string;
+  contents?: ContentProps[];
+};
+
 export type BarProps = {
   title: string;
   add_date: string;
   last_modified: string;
   personal_toolbar_folder: boolean;
-  folders?: FolderProps[];
-  bookmarks?: BookmarkProps[];
+  contents?: ContentProps[];
 };
 
 export const BookmarkHeader = `
