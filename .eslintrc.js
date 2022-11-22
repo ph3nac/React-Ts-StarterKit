@@ -77,5 +77,11 @@ module.exports = {
         'import/prefer-default-export': 0,
       },
     },
+    {
+      files: ['**/*.stories.*'],
+      rules: {
+        'react/jsx-props-no-spreading': 0,
+      },
+    },
   ],
 };
