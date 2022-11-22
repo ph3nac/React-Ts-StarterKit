@@ -43,6 +43,7 @@ module.exports = {
   ],
   root: true,
   rules: {
+    '@typescript-eslint/no-non-null-assertion': 0,
     'react/no-unknown-property': [
       'error',
       {

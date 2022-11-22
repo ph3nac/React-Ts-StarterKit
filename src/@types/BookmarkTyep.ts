@@ -75,8 +75,10 @@ export type Folder = {
   add_date: string;
   last_modified: string;
   contentsWrapperTag: typeof WrapperTag;
-  Bookmarks?: Bookmark[];
+  contents?: Content[];
 };
+
+export type Content = Bookmark | Folder;
 
 export type Bar = {
   tag: typeof FolderTag;
@@ -85,8 +87,7 @@ export type Bar = {
   last_modified: string;
   personal_toolbar_folder: string;
   contentsWrapperTag: typeof WrapperTag;
-  Folders?: Folder[];
-  Bookmarks?: Bookmark[];
+  contents?: Content[];
 };
 
 export type BookmarkBody = {

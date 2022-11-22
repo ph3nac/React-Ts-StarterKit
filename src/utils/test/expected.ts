@@ -8,6 +8,7 @@ import {
   Folder,
   Bookmark,
   BookmarkTag,
+  Content,
 } from '@/@types/BookmarkTyep';
 
 const bookmark: Bookmark = {
@@ -26,10 +27,10 @@ const folder: Folder = {
   add_date: '1646478792',
   last_modified: '1668921574',
   contentsWrapperTag: WrapperTag,
-  Bookmarks: bookmarks,
+  contents: bookmarks,
 };
 
-const folders: Folder[] = [folder];
+const contents: Content[] = [folder, bookmark];
 
 const bar: Bar = {
   contentsWrapperTag: WrapperTag,
@@ -38,8 +39,7 @@ const bar: Bar = {
   add_date: '1618827550',
   last_modified: '1668921581',
   personal_toolbar_folder: 'true',
-  Folders: folders,
-  Bookmarks: bookmarks,
+  contents: contents,
 };
 const bars: Bar[] = [bar];
 
