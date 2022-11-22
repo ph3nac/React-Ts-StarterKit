@@ -54,6 +54,7 @@ const BookmarkBar: FC<BarProps> = ({
               title={content.title}
               add_date={content.add_date}
               last_modified={content.last_modified}
+              contents={content.contents}
               type={content.type}
             />
           );
