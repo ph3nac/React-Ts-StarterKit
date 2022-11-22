@@ -13,21 +13,25 @@ import {
 import { getDirectChildren } from './getDirectChildren';
 
 const getContents = (barBody: Element): Content[] | undefined => {
-  const contents = getDirectChildren(barBody, 'dt').map((content, i) => {
-    if (getDirectChildren(content, 'a')[0]) {
+  let contents: Array<Content> | undefined;
+  getDirectChildren(barBody, 'dt').forEach((content, i) => {
+    if (typeof contents === 'undefined') {
+      contents = [];
+    }
+    if (getDirectChildren(content, 'a')) {
       const bookmark = getDirectChildren(content, 'a')[0];
-      const ret: Bookmark = {
+      const elem: Bookmark = {
         tag: BookmarkTag,
         title: bookmark.textContent!,
         href: bookmark.getAttribute('href')!,
         add_date: bookmark.getAttribute('add_date')!,
         icon: bookmark.getAttribute('icon')!,
       };
-      return ret;
+      contents.push(elem);
     }
-    if (getDirectChildren(content, 'h3')[0]) {
+    if (getDirectChildren(content, 'h3')) {
       const folder = getDirectChildren(content, 'h3')[0];
-      const ret: Folder = {
+      const elem: Folder = {
         tag: FolderTag,
         title: folder.textContent!,
         add_date: folder.getAttribute('add_date')!,
@@ -35,11 +39,9 @@ const getContents = (barBody: Element): Content[] | undefined => {
         contentsWrapperTag: WrapperTag,
         contents: getContents(folder),
       };
-      return ret;
+      contents.push(elem);
     }
-    return undefined;
   });
-  if (contents.includes(undefined)) return undefined;
   return contents;
 };
 
