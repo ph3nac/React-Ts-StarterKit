@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import { BarProps, BookmarkProps, FolderProps } from '@/@types/BookmarkTyep';
 import { FolderMock } from '../Folder/FolderMock';
 import { BookmarkMock } from '../Bookmark/BookmarkMock';

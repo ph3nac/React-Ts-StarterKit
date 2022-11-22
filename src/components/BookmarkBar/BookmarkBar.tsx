@@ -1,10 +1,11 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /** @jsxImportSource @emotion/react */
 import { colorCode } from '@/colorCode';
 import { css } from '@emotion/react';
 import { FC } from 'react';
 import { BarProps } from '@/@types/BookmarkTyep';
-import Folder from '../Folder/Folder';
 import Bookmark from '../Bookmark/Bookmark';
+import Folder from '../Folder/Folder';
 
 const BarStyles = css`
   background-color: ${colorCode.blue};
@@ -28,30 +29,37 @@ const BookmarkBar: FC<BarProps> = ({
   add_date,
   last_modified,
   personal_toolbar_folder,
-  folders,
-  bookmarks,
+  contents,
 }) => (
   <div className="BookmarkBar" css={BarStyles}>
     <div css={titleStyles}>{title}</div>
     <div css={gridStyles}>
-      {folders?.map((folder) => (
-        <Folder
-          title={folder.title}
-          add_date={folder.add_date}
-          last_modified={folder.last_modified}
-          bookmarks={folder.bookmarks}
-          id="1"
-        />
-      ))}
-      {bookmarks?.map((bookmark) => (
-        <Bookmark
-          id={bookmark.id}
-          title={bookmark.title}
-          href={bookmark.href}
-          add_date={bookmark.add_date}
-          icon={bookmark.icon}
-        />
-      ))}
+      {contents?.map((content) => {
+        if (content.type === 'bookmark') {
+          return (
+            <Bookmark
+              id={content.id}
+              title={content.title}
+              href={content.href}
+              add_date={content.add_date}
+              icon={content.icon}
+              type={content.type}
+            />
+          );
+        }
+        if (content.type === 'folder') {
+          return (
+            <Folder
+              id={content.id}
+              title={content.title}
+              add_date={content.add_date}
+              last_modified={content.last_modified}
+              type={content.type}
+            />
+          );
+        }
+        return <div />;
+      })}
     </div>
   </div>
 );

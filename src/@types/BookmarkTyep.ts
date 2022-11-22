@@ -6,6 +6,7 @@ type BookmarkProps = {
   icon: string;
 };
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 type FolderProps = {
   id: string;
   title: string;
