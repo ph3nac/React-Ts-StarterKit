@@ -2,15 +2,19 @@ import { BarProps, ContentProps } from '@/@types/BookmarkTyep';
 import { FolderMock } from '../Folder/FolderMock';
 import { BookmarkMock } from '../Bookmark/BookmarkMock';
 
-const contents: ContentProps[] = Array.from({ length: 5 }, (v, i) => ({
-  ...FolderMock,
-  id: i.toString(),
-}));
+const contents: ContentProps[] = Array.from({ length: 5 }, (v, i) => {
+  if (i === 3) {
+    return {
+      ...BookmarkMock,
+      id: i.toString(),
+    };
+  }
 
-const bookmarks: ContentProps[] = Array.from({ length: 5 }, (v, i) => ({
-  ...BookmarkMock,
-  id: i.toString(),
-}));
+  return {
+    ...FolderMock,
+    id: i.toString(),
+  };
+});
 
 export const BookmarkBarMock: BarProps = {
   title: 'Bookmark Bar',
