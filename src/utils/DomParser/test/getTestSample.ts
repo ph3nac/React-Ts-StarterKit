@@ -7,6 +7,7 @@ import {
   WrapperTag,
   Bar,
   BookmarkBody,
+  BookmarkHeader,
 } from '@/@types/BookmarkTyep';
 
 export const contentSamples = {
@@ -49,9 +50,16 @@ export const BarSamples = {
   } as Bar,
 };
 
-export const BodySample = {
+export const BodySamples = {
   test1: {
     contentsWrapperTag: WrapperTag,
     Bars: [BarSamples.test1],
   } as BookmarkBody,
+};
+
+export const JsonSamples = {
+  test1: {
+    header: BookmarkHeader,
+    body: BodySamples.test1,
+  },
 };
