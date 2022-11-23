@@ -22,6 +22,7 @@ export const getContents = (barBody: Element): Content[] | undefined => {
         href: bookmark.getAttribute('href')!,
         add_date: bookmark.getAttribute('add_date')!,
         icon: bookmark.getAttribute('icon')!,
+        type: 'bookmark',
       };
       contents?.push(elem);
     }
@@ -35,6 +36,7 @@ export const getContents = (barBody: Element): Content[] | undefined => {
         last_modified: folder.getAttribute('last_modified')!,
         contentsWrapperTag: WrapperTag,
         contents: getContents(folderBody),
+        type: 'folder',
       };
       contents?.push(elem);
     }

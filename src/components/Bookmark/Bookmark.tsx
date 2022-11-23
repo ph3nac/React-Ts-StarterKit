@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /** @jsxImportSource @emotion/react */
-import { ContentProps } from '@/@types/BookmarkTyep';
+import { BookmarkProps } from '@/@types/BookmarkTyep';
 import { colorCode } from '@/colorCode';
 import { css } from '@emotion/react';
 import { FC } from 'react';
 
-const Bookmark: FC<ContentProps> = ({
+const Bookmark: FC<BookmarkProps> = ({
   id,
   title,
   href,

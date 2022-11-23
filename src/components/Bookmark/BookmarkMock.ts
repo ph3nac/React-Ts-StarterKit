@@ -1,6 +1,6 @@
-import { ContentProps } from '@/@types/BookmarkTyep';
+import { BookmarkProps } from '@/@types/BookmarkTyep';
 
-export const BookmarkMock: ContentProps = {
+export const BookmarkMock: BookmarkProps = {
   id: '0',
   title: 'glitch',
   href: 'https://glitch.com/dashboard',

@@ -1,30 +1,34 @@
-type BookmarkProps = {
+export type ContentProps = BookmarkProps | FolderProps;
+
+export type BookmarkProps = {
   id: string;
   title: string;
   href: string;
   add_date: string;
   icon: string;
+  type: 'bookmark';
 };
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-type FolderProps = {
+export type FolderProps = {
   id: string;
   title: string;
   add_date: string;
   last_modified: string;
-  bookmarks?: BookmarkProps[];
+  contents?: ContentProps[];
+  type: 'folder';
 };
 
-export type ContentProps = {
-  id: string;
-  title: string;
-  add_date: string;
-  type: 'folder' | 'bookmark';
-  href?: string;
-  icon?: string;
-  last_modified?: string;
-  contents?: ContentProps[];
-};
+// export type ContentProps = {
+//   id: string;
+//   title: string;
+//   add_date: string;
+//   type: 'folder' | 'bookmark';
+//   href?: string;
+//   icon?: string;
+//   last_modified?: string;
+//   contents?: ContentProps[];
+// };
 
 export type BarProps = {
   title: string;
@@ -56,6 +60,7 @@ export const BookmarkTag = {
 } as const;
 
 export type Bookmark = {
+  type: 'bookmark';
   tag: typeof BookmarkTag;
   title: string;
   href: string;
@@ -70,6 +75,7 @@ export const FolderTag = {
 } as const;
 
 export type Folder = {
+  type: 'folder';
   tag: typeof FolderTag;
   title: string;
   add_date: string;

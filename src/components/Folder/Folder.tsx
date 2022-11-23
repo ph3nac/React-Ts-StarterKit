@@ -3,10 +3,10 @@
 import { FC } from 'react';
 import { css } from '@emotion/react';
 import { colorCode } from '@/colorCode';
-import { ContentProps } from '@/@types/BookmarkTyep';
+import { FolderProps } from '@/@types/BookmarkTyep';
 import Bookmark from '../Bookmark/Bookmark';
 
-const Folder: FC<ContentProps> = ({
+const Folder: FC<FolderProps> = ({
   id,
   title,
   add_date,

@@ -13,6 +13,7 @@ import {
 export const contentSamples = {
   test1: [
     {
+      type: 'folder',
       tag: FolderTag,
       title: 'account',
       add_date: '1646478792',
@@ -20,6 +21,7 @@ export const contentSamples = {
       contentsWrapperTag: WrapperTag,
       contents: [
         {
+          type: 'bookmark',
           tag: BookmarkTag,
           title: 'Glitch',
           add_date: '1646478784',
@@ -29,6 +31,7 @@ export const contentSamples = {
       ],
     } as Folder,
     {
+      type: 'bookmark',
       tag: BookmarkTag,
       title: 'Glitch',
       add_date: '1646478784',
