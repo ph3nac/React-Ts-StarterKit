@@ -5,6 +5,7 @@ import {
   Folder,
   FolderTag,
   WrapperTag,
+  Bar,
 } from '@/@types/BookmarkTyep';
 
 export const contentSamples = {
@@ -33,4 +34,16 @@ export const contentSamples = {
       icon: '',
     } as Bookmark,
   ] as Content[],
+};
+
+export const BarSamples = {
+  test1: {
+    tag: FolderTag,
+    title: 'Bookmarks Bar',
+    add_date: '1618827550',
+    last_modified: '1668921581',
+    personal_toolbar_folder: 'true',
+    contentsWrapperTag: WrapperTag,
+    contents: contentSamples.test1,
+  } as Bar,
 };

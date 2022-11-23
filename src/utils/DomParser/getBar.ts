@@ -11,7 +11,7 @@ export const getBar = (_bar: Element): Bar => {
   }
   const ret: Bar = {
     tag: FolderTag,
-    title: barName.textContent!,
+    title: barName.textContent!.trim(),
     add_date: barName.getAttribute('add_date')!,
     last_modified: barName.getAttribute('last_modified')!,
     personal_toolbar_folder: barName.getAttribute('personal_toolbar_folder')!,

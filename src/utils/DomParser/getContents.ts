@@ -18,7 +18,7 @@ export const getContents = (barBody: Element): Content[] | undefined => {
       const bookmark = getDirectChildren(content, 'a')[0];
       const elem: Bookmark = {
         tag: BookmarkTag,
-        title: bookmark.textContent!,
+        title: bookmark.textContent!.trim(),
         href: bookmark.getAttribute('href')!,
         add_date: bookmark.getAttribute('add_date')!,
         icon: bookmark.getAttribute('icon')!,
@@ -30,7 +30,7 @@ export const getContents = (barBody: Element): Content[] | undefined => {
       const folderBody = getDirectChildren(content, 'dl')[0];
       const elem: Folder = {
         tag: FolderTag,
-        title: folder.textContent!,
+        title: folder.textContent!.trim(),
         add_date: folder.getAttribute('add_date')!,
         last_modified: folder.getAttribute('last_modified')!,
         contentsWrapperTag: WrapperTag,

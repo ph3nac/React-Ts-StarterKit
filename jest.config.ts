@@ -179,6 +179,7 @@ export default {
   transform: {
     '^.+\\.html$': 'html-loader-jest',
     // '^.+\\.(ts|tsx)$': 'ts-jest',
+    '^.+\\.(t|j)sx?$': ['@swc/jest'],
   },
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
