@@ -11,10 +11,10 @@ import { getDirectChildren } from './getDirectChildren';
 export const getContents = (barBody: Element): Content[] | undefined => {
   let contents: Array<Content> | undefined;
   getDirectChildren(barBody, 'dt').forEach((content) => {
-    if (typeof contents === 'undefined') {
+    if (contents === undefined) {
       contents = [];
     }
-    if (getDirectChildren(content, 'a')) {
+    if (getDirectChildren(content, 'a')[0]) {
       const bookmark = getDirectChildren(content, 'a')[0];
       const elem: Bookmark = {
         tag: BookmarkTag,
@@ -23,19 +23,20 @@ export const getContents = (barBody: Element): Content[] | undefined => {
         add_date: bookmark.getAttribute('add_date')!,
         icon: bookmark.getAttribute('icon')!,
       };
-      contents.push(elem);
+      contents?.push(elem);
     }
-    if (getDirectChildren(content, 'h3')) {
+    if (getDirectChildren(content, 'h3')[0]) {
       const folder = getDirectChildren(content, 'h3')[0];
+      const folderBody = getDirectChildren(content, 'dl')[0];
       const elem: Folder = {
         tag: FolderTag,
         title: folder.textContent!,
         add_date: folder.getAttribute('add_date')!,
         last_modified: folder.getAttribute('last_modified')!,
         contentsWrapperTag: WrapperTag,
-        contents: getContents(folder),
+        contents: getContents(folderBody),
       };
-      contents.push(elem);
+      contents?.push(elem);
     }
   });
   return contents;
