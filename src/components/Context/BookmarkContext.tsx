@@ -1,20 +1,35 @@
+/* eslint-disable react/jsx-no-constructed-context-values */
 /* eslint-disable import/prefer-default-export */
-import { FC, ReactNode, useMemo, useState } from 'react';
-import { createContext } from 'vm';
+import { ContentProps } from '@/@types/BookmarkTyep';
+import {
+  createContext,
+  Dispatch,
+  FC,
+  ReactNode,
+  SetStateAction,
+  useMemo,
+  useState,
+} from 'react';
 
-export const BookmarkContext = createContext([]);
+// type T = {
+//   contents: ContentProps[];
+//   setContents: Dispatch<SetStateAction<ContentProps[]>>;
+// };
+
+type T = [
+  contents: ContentProps[],
+  setContents: Dispatch<SetStateAction<ContentProps[]>>,
+];
+export const BookmarkContext = createContext<T>([[], () => {}]);
 
 type Props = {
   children: ReactNode | undefined;
 };
 export const BookmarkContextWrapper: FC<Props> = ({ children }) => {
-  const [bars, setBars] = useState([]);
-  const BookmarkContextValue = useMemo(
-    () => ({
-      bars,
-      setBars,
-    }),
-    [bars, setBars],
+  const [contents, setContents] = useState<ContentProps[]>([]);
+  const BookmarkContextValue = useMemo<T>(
+    () => [contents, setContents],
+    [contents],
   );
   return (
     <BookmarkContext.Provider value={BookmarkContextValue}>
