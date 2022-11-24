@@ -1,12 +1,14 @@
 /* eslint-disable import/prefer-default-export */
-import { FC, useMemo, useState } from 'react';
+import { FC, ReactNode, useMemo, useState } from 'react';
 import { createContext } from 'vm';
 
 export const BookmarkContext = createContext([]);
 
-export const StoreBarsWrapper: FC<Element> = (props) => {
+type Props = {
+  children: ReactNode | undefined;
+};
+export const BookmarkContextWrapper: FC<Props> = ({ children }) => {
   const [bars, setBars] = useState([]);
-  const { children } = props;
   const BookmarkContextValue = useMemo(
     () => ({
       bars,
