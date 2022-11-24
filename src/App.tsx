@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import { BookmarkBarMock } from './components/BookmarkBar/BookmarkBarMock';
 import BookmarkBar from './components/BookmarkBar/BookmarkBar';
 
