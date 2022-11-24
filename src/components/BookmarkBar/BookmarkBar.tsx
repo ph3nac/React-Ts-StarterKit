@@ -12,6 +12,7 @@ const BarStyles = css`
   color: white;
   font-size: 28px;
   border-radius: 0.2rem;
+  margin: 20px;
 `;
 const titleStyles = css`
   margin-left: 10px;

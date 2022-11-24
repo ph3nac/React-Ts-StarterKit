@@ -16,4 +16,5 @@ export const Default = Template.bind({});
 Default.args = {
   ...FolderMock,
   id: '1',
+  type: 'folder',
 };

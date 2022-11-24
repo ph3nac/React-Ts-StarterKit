@@ -22,6 +22,7 @@ const Bookmark: FC<BookmarkProps> = ({
     padding: 0.25rem 0.5rem;
     background-color: ${colorCode.green};
     border-radius: 0.5rem;
+    max-height: 20px;
     &:hover {
       background-color: ${colorCode.light_green};
     }

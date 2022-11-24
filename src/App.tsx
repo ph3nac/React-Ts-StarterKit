@@ -1,9 +1,9 @@
-import { BookmarkMock } from './components/Bookmark/BookmarkMock';
-import Bookmark from './components/Bookmark/Bookmark';
+import { BookmarkBarMock } from './components/BookmarkBar/BookmarkBarMock';
+import BookmarkBar from './components/BookmarkBar/BookmarkBar';
 
 const App = () => (
   <div className="App">
-    <Bookmark {...BookmarkMock} />
+    <BookmarkBar {...BookmarkBarMock} />
   </div>
 );
 export default App;
