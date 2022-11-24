@@ -9,7 +9,6 @@ export type BookmarkProps = {
   type: 'bookmark';
 };
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export type FolderProps = {
   id: string;
   title: string;
@@ -19,17 +18,6 @@ export type FolderProps = {
   type: 'folder';
 };
 
-// export type ContentProps = {
-//   id: string;
-//   title: string;
-//   add_date: string;
-//   type: 'folder' | 'bookmark';
-//   href?: string;
-//   icon?: string;
-//   last_modified?: string;
-//   contents?: ContentProps[];
-// };
-
 export type BarProps = {
   title: string;
   add_date: string;
@@ -38,6 +26,7 @@ export type BarProps = {
   contents?: ContentProps[];
 };
 
+// JsonDom Type Definitions
 export const BookmarkHeader = `
 <!DOCTYPE NETSCAPE-Bookmark-file-1>
 <!-- This is an automatically generated file.
