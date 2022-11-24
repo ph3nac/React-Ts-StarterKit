@@ -1,5 +1,3 @@
-/* eslint-disable react/jsx-no-constructed-context-values */
-/* eslint-disable import/prefer-default-export */
 import { ContentProps } from '@/@types/BookmarkTyep';
 import {
   createContext,
@@ -10,11 +8,6 @@ import {
   useMemo,
   useState,
 } from 'react';
-
-// type T = {
-//   contents: ContentProps[];
-//   setContents: Dispatch<SetStateAction<ContentProps[]>>;
-// };
 
 type T = [
   contents: ContentProps[],
