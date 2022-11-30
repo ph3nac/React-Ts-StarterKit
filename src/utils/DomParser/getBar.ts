@@ -1,4 +1,4 @@
-import { Bar, FolderTag, WrapperTag } from '@/@types/BookmarkTyep';
+import { Bar, FolderTag, WrapperTag } from '@/@types/BookmarkType';
 import { getContents } from './getContents';
 import { getDirectChildren } from './getDirectChildren';
 

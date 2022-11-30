@@ -1,4 +1,4 @@
-import { BarProps, ContentProps } from '@/@types/BookmarkTyep';
+import { BarProps, ContentProps } from '@/@types/BookmarkType';
 import { FolderMock } from '../Folder/FolderMock';
 import { BookmarkMock } from '../Bookmark/BookmarkMock';
 

@@ -1,4 +1,4 @@
-import { BookmarkHeader, JsonDom } from '@/@types/BookmarkTyep';
+import { BookmarkHeader, JsonDom } from '@/@types/BookmarkType';
 import { getBody } from './getBody';
 import { getDirectChildren } from './getDirectChildren';
 

@@ -1,4 +1,4 @@
-import { ContentProps } from '@/@types/BookmarkTyep';
+import { ContentProps } from '@/@types/BookmarkType';
 import { BookmarkMock } from '../Bookmark/BookmarkMock';
 
 const contents: ContentProps[] = Array.from({ length: 5 }, (v, i) => ({

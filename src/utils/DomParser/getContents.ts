@@ -5,7 +5,7 @@ import {
   Folder,
   FolderTag,
   WrapperTag,
-} from '@/@types/BookmarkTyep';
+} from '@/@types/BookmarkType';
 import { getDirectChildren } from './getDirectChildren';
 
 export const getContents = (barBody: Element): Content[] | undefined => {

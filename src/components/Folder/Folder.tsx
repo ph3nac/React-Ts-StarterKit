@@ -2,9 +2,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /** @jsxImportSource @emotion/react */
 import { FC } from 'react';
-import { css } from '@emotion/react';
-import { colorCode } from '@/components/styles/colorCode';
-import { FolderProps } from '@/@types/BookmarkTyep';
+import { FolderProps } from '@/@types/BookmarkType';
 import Bookmark from '../Bookmark/Bookmark';
 import { FolderStyle } from '../styles/BookmarkStyles';
 
@@ -31,5 +29,4 @@ const Folder: FC<FolderProps> = ({
     })}
   </ul>
 );
-
 export default Folder;

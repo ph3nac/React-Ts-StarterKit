@@ -1,8 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /** @jsxImportSource @emotion/react */
-import { BookmarkProps } from '@/@types/BookmarkTyep';
-import { colorCode } from '@/components/styles/colorCode';
-import { css } from '@emotion/react';
+import { BookmarkProps } from '@/@types/BookmarkType';
 import { FC } from 'react';
 import { BookmarkStyle } from '../styles/BookmarkStyles';
 

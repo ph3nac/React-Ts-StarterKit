@@ -1,4 +1,4 @@
-import { BookmarkProps } from '@/@types/BookmarkTyep';
+import { BookmarkProps } from '@/@types/BookmarkType';
 
 export const BookmarkMock: BookmarkProps = {
   id: '0',

@@ -8,7 +8,7 @@ import {
   Bar,
   BookmarkBody,
   BookmarkHeader,
-} from '@/@types/BookmarkTyep';
+} from '@/@types/BookmarkType';
 
 export const contentSamples = {
   test1: [

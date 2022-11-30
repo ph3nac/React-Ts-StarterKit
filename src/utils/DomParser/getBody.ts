@@ -1,4 +1,4 @@
-import { Bar, BookmarkBody, WrapperTag } from '@/@types/BookmarkTyep';
+import { Bar, BookmarkBody, WrapperTag } from '@/@types/BookmarkType';
 import { getBar } from './getBar';
 
 export const getBody = (_bars: Element[]): BookmarkBody => {

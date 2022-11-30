@@ -1,13 +1,10 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import { BookmarkBarMock } from './components/BookmarkBar/BookmarkBarMock';
 import BookmarkBar from './components/BookmarkBar/BookmarkBar';
-import { BookmarkContextWrapper } from './components/Context/BookmarkContext';
 
 const App = () => (
   <div className="App">
-    <BookmarkContextWrapper>
-      <BookmarkBar {...BookmarkBarMock} />
-    </BookmarkContextWrapper>
+    <BookmarkBar {...BookmarkBarMock} />
   </div>
 );
 export default App;
